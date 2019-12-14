@@ -13,3 +13,6 @@ cd /opt/iotloragateway/
 git clone https://github.com/PiSupply/iot-lora-gw-docker.git
 
 systemctl disable smbd.service
+
+#Change default SSH port
+sed -i -e 's/#Port 22/Port 386/g' /etc/ssh/sshd_config
