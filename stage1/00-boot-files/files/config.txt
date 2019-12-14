@@ -63,3 +63,7 @@ max_framebuffers=2
 
 [all]
 #dtoverlay=vc4-fkms-v3d
+
+dtparam=spi=on
+dtoverlay=spi1-2cs
+core_freq=250

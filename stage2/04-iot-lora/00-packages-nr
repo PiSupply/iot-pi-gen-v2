@@ -1,0 +1,6 @@
+firmware-ralink
+firmware-realtek
+git
+
+libffi-dev
+libssl-dev
