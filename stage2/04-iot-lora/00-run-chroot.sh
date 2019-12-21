@@ -22,3 +22,7 @@ systemctl disable smbd.service
 sed -i -e 's/#Port 22/Port 386/g' /etc/ssh/sshd_config
 
 rm /etc/sudoers.d/010_pi-nopasswd
+
+
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
