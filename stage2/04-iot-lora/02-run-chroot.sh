@@ -14,7 +14,15 @@ git clone https://github.com/PiSupply/iot-lora-gw-docker.git
 
 cd iot-lora-gw-docker
 
-./iot-lora-gw-docker-update.sh
+#Manually jus run parts of the update file
+install -m 644 iot-lora-gateway.service /lib/systemd/system/
+install -m 644 iot-lora-gateway-restarter.service /lib/systemd/system/
+install -m 644 iot-lora-gateway-eth-switcher.service /lib/systemd/system/
+
+systemctl daemon-reload
+
+
+#./iot-lora-gw-docker-update.sh
 
 systemctl disable smbd.service
 
